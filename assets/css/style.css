@@ -149,7 +149,7 @@ p { margin: 0; }
   color: var(--accent); background: var(--accent-soft); padding: 6px 14px; border-radius: 999px; margin-bottom: 22px;
 }
 .hero h1 { font-size: clamp(2.5rem, 4.6vw, 3.9rem); max-width: 13ch; }
-.hero-sub { margin-top: 22px; font-size: 19px; color: var(--muted); max-width: 44ch; }
+.hero-sub { margin-top: 22px; font-size: 19px; color: var(--muted); max-width: 50ch; }
 .hero-ctas { margin-top: 34px; display: flex; gap: 12px; flex-wrap: wrap; }
 
 .dash { position: relative; }

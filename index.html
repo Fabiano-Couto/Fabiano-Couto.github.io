@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    // Pick the language before first paint: ?lang= > saved choice > browser language.
+    (function () {
+      var l = null;
+      try { l = localStorage.getItem('lang'); } catch (e) {}
+      var q = new URLSearchParams(location.search).get('lang');
+      if (q === 'pt' || q === 'en') l = q;
+      if (l !== 'pt' && l !== 'en') l = (navigator.language || 'en').toLowerCase().indexOf('pt') === 0 ? 'pt' : 'en';
+      document.documentElement.lang = l === 'pt' ? 'pt-BR' : 'en';
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+  <title>Fabiano Couto | Systems &amp; Data Analyst</title>
+  <meta name="description" content="Fabiano Couto, Systems and Data Analyst. Sankhya ERP dashboards, SQL and automation. Twenty years in live television and hands-on work experience.">
+  <meta name="theme-color" content="#f4f6f9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1014" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://fabianocouto.me/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fabianocouto.me/">
+  <meta property="og:title" content="Fabiano Couto | Systems &amp; Data Analyst">
+  <meta property="og:description" content="Sankhya ERP dashboards, SQL and automation. Twenty years in live television.">
+  <meta property="og:image" content="https://fabianocouto.me/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main"><span data-l="en">Skip to content</span><span data-l="pt">Pular para o conteúdo</span></a>
+  <div id="top" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Fabiano Couto">
+        <span class="brand-mark" aria-hidden="true">FC</span>
+        <span>Fabiano Couto</span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#work"><span data-l="en">Projects</span><span data-l="pt">Projetos</span></a>
+        <a href="#services"><span data-l="en">Services</span><span data-l="pt">Serviços</span></a>
+        <a href="#broadcast"><span data-l="en">Broadcast</span><span data-l="pt">Televisão</span></a>
+        <a href="#hands-on"><span data-l="en">Hands-on</span><span data-l="pt">Trabalho manual</span></a>
+        <a href="#experience"><span data-l="en">Experience</span><span data-l="pt">Experiência</span></a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang" role="group" aria-label="Language / Idioma">
+          <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-set-lang="pt" aria-pressed="false">PT</button>
+        </div>
+        <a class="btn btn-primary" href="#contact"><span data-l="en">Get in touch</span><span data-l="pt">Fale comigo</span></a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" data-aria-en="Open menu" data-aria-pt="Abrir menu" aria-label="Open menu">
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-list"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+      <a href="#work"><span data-l="en">Projects</span><span data-l="pt">Projetos</span></a>
+      <a href="#services"><span data-l="en">Services</span><span data-l="pt">Serviços</span></a>
+      <a href="#broadcast"><span data-l="en">Broadcast</span><span data-l="pt">Televisão</span></a>
+      <a href="#hands-on"><span data-l="en">Hands-on</span><span data-l="pt">Trabalho manual</span></a>
+      <a href="#experience"><span data-l="en">Experience</span><span data-l="pt">Experiência</span></a>
+      <a class="btn btn-primary" href="#contact"><span data-l="en">Get in touch</span><span data-l="pt">Fale comigo</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow reveal"><span data-l="en">Systems &amp; Data Analyst</span><span data-l="pt">Analista de Sistemas e Dados</span></span>
+          <h1 class="reveal" style="--d:.08s">
+            <span data-l="en">ERP data your team can read.</span>
+            <span data-l="pt">Dados do ERP que a equipe entende.</span>
+          </h1>
+          <p class="hero-sub reveal" style="--d:.16s">
+            <span data-l="en">I build Sankhya dashboards, SQL and automations that show revenue, margin and cash flow clearly.</span>
+            <span data-l="pt">Crio dashboards, SQL e automações no Sankhya que mostram faturamento, margem e fluxo de caixa com clareza.</span>
+          </p>
+          <div class="hero-ctas reveal" style="--d:.24s">
+            <a class="btn btn-primary" href="#contact"><span data-l="en">Get in touch</span><span data-l="pt">Fale comigo</span>
+              <svg class="icon icon-arrow" aria-hidden="true"><use href="assets/icons.svg#i-arrow-up-right"/></svg></a>
+            <a class="btn btn-ghost" href="#work"><span data-l="en">See projects</span><span data-l="pt">Ver projetos</span></a>
+          </div>
+        </div>
+
+        <div class="dash reveal" style="--d:.2s">
+          <div class="dash-main">
+            <div class="dash-head">
+              <div class="dash-title"><span data-l="en">Revenue vs. goal</span><span data-l="pt">Faturamento x meta</span></div>
+              <div class="dash-legend">
+                <span><i class="key"></i><span data-l="en">Revenue</span><span data-l="pt">Faturamento</span></span>
+                <span><i class="key-line"></i><span data-l="en">Goal</span><span data-l="pt">Meta</span></span>
+              </div>
+            </div>
+            <div class="kpis">
+              <div class="kpi">
+                <div class="kpi-label"><span data-l="en">Revenue YTD</span><span data-l="pt">Faturamento no ano</span></div>
+                <div class="kpi-value"><span data-l="en">R$ 6.33M</span><span data-l="pt">R$ 6,33 mi</span></div>
+                <div class="kpi-delta"><span data-l="en">+2.2% vs. goal</span><span data-l="pt">+2,2% sobre a meta</span></div>
+              </div>
+              <div class="kpi">
+                <div class="kpi-label"><span data-l="en">Gross margin</span><span data-l="pt">Margem bruta</span></div>
+                <div class="kpi-value"><span data-l="en">31.4%</span><span data-l="pt">31,4%</span></div>
+                <div class="kpi-delta"><span data-l="en">+1.3 pp</span><span data-l="pt">+1,3 p.p.</span></div>
+              </div>
+              <div class="kpi">
+                <div class="kpi-label"><span data-l="en">Overdue</span><span data-l="pt">Inadimplência</span></div>
+                <div class="kpi-value"><span data-l="en">3.8%</span><span data-l="pt">3,8%</span></div>
+                <div class="kpi-delta"><span data-l="en">-0.6 pp</span><span data-l="pt">-0,6 p.p.</span></div>
+              </div>
+            </div>
+            <div data-chart="revenue"></div>
+          </div>
+          <div class="dash-float">
+            <div class="dash-title"><span data-l="en">Sales by region</span><span data-l="pt">Vendas por região</span></div>
+            <div data-chart="regions"></div>
+          </div>
+          <p class="sample-note"><span data-l="en">Sample data.</span><span data-l="pt">Dados ilustrativos.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLSET (the page's only marquee) -->
+    <div class="tools" aria-label="Tools">
+      <div class="tools-track">
+        <span>Sankhya Om</span><span>Oracle</span><span>SQL &amp; PL/SQL</span><span>Stored procedures</span>
+        <span><span data-l="en">HTML5 &amp; JSP dashboards</span><span data-l="pt">Dashboards HTML5 e JSP</span></span>
+        <span>JavaScript</span>
+        <span><span data-l="en">Java extensions</span><span data-l="pt">Extensões em Java</span></span>
+        <span><span data-l="en">Income statement &amp; cash flow</span><span data-l="pt">DRE e DFC</span></span>
+        <span><span data-l="en">Data dictionary</span><span data-l="pt">Dicionário de dados</span></span>
+        <span><span data-l="en">E-mail automation</span><span data-l="pt">Automação de e-mail</span></span>
+        <span>Git &amp; GitHub</span>
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2><span data-l="en">Dashboards built around real decisions.</span><span data-l="pt">Painéis pensados para decisões reais.</span></h2>
+          <p>
+            <span data-l="en">Each project starts with the question a manager needs answered, then the SQL that answers it inside Sankhya.</span>
+            <span data-l="pt">Cada projeto começa pela pergunta que o gestor precisa responder e depois pelo SQL que responde isso dentro do Sankhya.</span>
+          </p>
+        </div>
+
+        <div class="bento">
+          <article class="cell cell-a reveal">
+            <div>
+              <h3><span data-l="en">Income statement (DRE)</span><span data-l="pt">DRE gerencial</span></h3>
+              <p><span data-l="en">From gross revenue to EBITDA, built on Sankhya goals with drill-down to each account.</span><span data-l="pt">Da receita bruta ao EBITDA, montada sobre as metas do Sankhya, com detalhamento por conta.</span></p>
+            </div>
+            <div class="chart-slot" data-chart="waterfall"></div>
+          </article>
+
+          <article class="cell cell-b reveal" style="--d:.08s">
+            <div>
+              <h3><span data-l="en">Cash flow (DFC)</span><span data-l="pt">Fluxo de caixa (DFC)</span></h3>
+              <p><span data-l="en">Weekly cash balance, with the next three weeks projected.</span><span data-l="pt">Saldo semanal de caixa, com as próximas três semanas projetadas.</span></p>
+            </div>
+            <div data-chart="cash"></div>
+          </article>
+
+          <article class="cell cell-c reveal" style="--d:.16s">
+            <div>
+              <h3><span data-l="en">Receivables aging</span><span data-l="pt">Inadimplência por faixa</span></h3>
+              <p><span data-l="en">Overdue amounts by age, so collections knows where to start.</span><span data-l="pt">Valores em atraso por faixa de dias, para a cobrança saber por onde começar.</span></p>
+            </div>
+            <div data-chart="aging"></div>
+          </article>
+
+          <article class="cell cell-d reveal">
+            <div>
+              <h3><span data-l="en">Production by week</span><span data-l="pt">Produção por semana</span></h3>
+              <p><span data-l="en">Daily output across six weeks, so slow days stand out at a glance.</span><span data-l="pt">Produção diária em seis semanas, com os dias fracos visíveis de cara.</span></p>
+            </div>
+            <div data-chart="heat"></div>
+            <div class="heat-legend"><span data-l="en">Lower</span><span data-l="pt">Menor</span><i></i><span data-l="en">Higher</span><span data-l="pt">Maior</span></div>
+          </article>
+
+          <article class="cell cell-e reveal" style="--d:.08s">
+            <div>
+              <h3><span data-l="en">Beyond dashboards</span><span data-l="pt">Além dos painéis</span></h3>
+              <p><span data-l="en">The ERP work that keeps the numbers right.</span><span data-l="pt">O trabalho no ERP que mantém os números certos.</span></p>
+            </div>
+            <div class="chip-list">
+              <span class="chip"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-database"/></svg>Stored procedures</span>
+              <span class="chip"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-table"/></svg><span data-l="en">Extra tables &amp; screens</span><span data-l="pt">Tabelas e telas adicionais</span></span>
+              <span class="chip"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-code"/></svg><span data-l="en">Java actions</span><span data-l="pt">Ações em Java</span></span>
+              <span class="chip"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-envelope-simple"/></svg><span data-l="en">Scheduled e-mail alerts</span><span data-l="pt">Alertas por e-mail agendados</span></span>
+              <span class="chip"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-funnel"/></svg><span data-l="en">Data validation</span><span data-l="pt">Validação de dados</span></span>
+            </div>
+          </article>
+        </div>
+        <p class="bento-note"><span data-l="en">Illustrative numbers. Client dashboards stay confidential.</span><span data-l="pt">Números ilustrativos. Os painéis dos clientes são confidenciais.</span></p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2><span data-l="en">What I handle in a Sankhya project</span><span data-l="pt">O que eu faço num projeto Sankhya</span></h2>
+        </div>
+        <div class="services">
+          <div class="service reveal">
+            <div class="service-icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chart-bar"/></svg></div>
+            <div>
+              <h3><span data-l="en">Dashboards &amp; BI</span><span data-l="pt">Dashboards e BI</span></h3>
+              <p><span data-l="en">HTML5 and JSP gadgets and native dashboards, with filters, drill-down and export.</span><span data-l="pt">Gadgets HTML5 e JSP e dashboards nativos, com filtros, drill-down e exportação.</span></p>
+            </div>
+          </div>
+          <div class="service reveal" style="--d:.08s">
+            <div class="service-icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-database"/></svg></div>
+            <div>
+              <h3><span data-l="en">SQL &amp; data</span><span data-l="pt">SQL e dados</span></h3>
+              <p><span data-l="en">Queries and views over the Sankhya data dictionary, with every indicator traced back to its source.</span><span data-l="pt">Consultas e views sobre o dicionário de dados do Sankhya, com cada indicador rastreado até a origem.</span></p>
+            </div>
+          </div>
+          <div class="service reveal">
+            <div class="service-icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-gear-six"/></svg></div>
+            <div>
+              <h3><span data-l="en">ERP customization</span><span data-l="pt">Personalização do ERP</span></h3>
+              <p><span data-l="en">Stored procedures, extra tables, custom screens and Java actions shaped to how each company works.</span><span data-l="pt">Procedures, tabelas adicionais, telas personalizadas e ações em Java no jeito de trabalhar de cada empresa.</span></p>
+            </div>
+          </div>
+          <div class="service reveal" style="--d:.08s">
+            <div class="service-icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-plugs-connected"/></svg></div>
+            <div>
+              <h3><span data-l="en">Automation &amp; integration</span><span data-l="pt">Automação e integração</span></h3>
+              <p><span data-l="en">Scheduled e-mails, alerts and integrations that take manual steps out of the routine.</span><span data-l="pt">E-mails agendados, alertas e integrações que tiram etapas manuais da rotina.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BROADCAST -->
+    <section class="section" id="broadcast" style="padding-top:0">
+      <div class="wrap">
+        <div class="broadcast-intro reveal">
+          <div class="big-number">20<small><span data-l="en">years at TV Gazeta</span><span data-l="pt">anos na TV Gazeta</span></small></div>
+          <div>
+            <span class="eyebrow"><span data-l="en">Broadcast</span><span data-l="pt">Televisão</span></span>
+            <h2><span data-l="en">Two decades in live television.</span><span data-l="pt">Duas décadas de televisão ao vivo.</span></h2>
+            <p>
+              <span data-l="en">At TV Gazeta I ran master control, a room full of monitors and equipment where every second on air depends on the operator. I also worked as a camera operator and video editor.</span>
+              <span data-l="pt">Na TV Gazeta operei o controle mestre, uma sala cheia de monitores e equipamentos onde cada segundo no ar depende do operador. Também trabalhei como cinegrafista e editor de vídeo.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="broadcast-grid">
+          <figure class="shot shot-tall reveal">
+            <div class="shot-img"><img src="assets/img/master-control.webp" width="1400" height="2102" loading="lazy" decoding="async"
+              alt="Broadcast control desk with rows of monitors and switching panels"
+              data-alt-en="Broadcast control desk with rows of monitors and switching panels"
+              data-alt-pt="Mesa de controle de TV com fileiras de monitores e painéis de comutação"></div>
+            <figcaption>
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-broadcast"/></svg>
+              <div><strong><span data-l="en">Master Control Operator</span><span data-l="pt">Operador de Controle Mestre</span></strong>
+                <span data-l="en">Playout, signal monitoring and on-air continuity.</span><span data-l="pt">Exibição, monitoramento de sinal e continuidade no ar.</span></div>
+            </figcaption>
+          </figure>
+          <div class="broadcast-side">
+            <figure class="shot reveal" style="--d:.08s">
+              <div class="shot-img"><img src="assets/img/camera.webp" width="1000" height="1499" loading="lazy" decoding="async"
+                alt="Professional video camera on a tripod in a studio"
+                data-alt-en="Professional video camera on a tripod in a studio"
+                data-alt-pt="Câmera de vídeo profissional no tripé, em estúdio"></div>
+              <figcaption>
+                <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-video-camera"/></svg>
+                <div><strong><span data-l="en">Camera Operator</span><span data-l="pt">Cinegrafista</span></strong>
+                  <span data-l="en">Studio and field recording.</span><span data-l="pt">Gravações em estúdio e externas.</span></div>
+              </figcaption>
+            </figure>
+            <figure class="shot reveal" style="--d:.16s">
+              <div class="shot-img"><img src="assets/img/editing.webp" width="1200" height="607" loading="lazy" decoding="async"
+                alt="Editor working on a video timeline in a dark room"
+                data-alt-en="Editor working on a video timeline in a dark room"
+                data-alt-pt="Editor trabalhando na linha do tempo de um vídeo, em sala escura"></div>
+              <figcaption>
+                <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-film-slate"/></svg>
+                <div><strong><span data-l="en">Video Editor</span><span data-l="pt">Editor de Vídeo</span></strong>
+                  <span data-l="en">Stories and programs cut to time.</span><span data-l="pt">Matérias e programas editados no tempo certo.</span></div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <p class="bridge reveal">
+          <span data-l="en">Master control taught me to watch many signals at once and act before a problem reaches the viewer. A good dashboard does the same job for a business.</span>
+          <span data-l="pt">O controle mestre me ensinou a acompanhar muitos sinais ao mesmo tempo e agir antes que o problema chegue ao telespectador. Um bom dashboard faz o mesmo por uma empresa.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- HANDS-ON -->
+    <section class="section" id="hands-on" style="padding-top:0">
+      <div class="wrap hands">
+        <div class="hands-copy reveal">
+          <h2><span data-l="en">Hands-on work, too.</span><span data-l="pt">Também trabalho com as mãos.</span></h2>
+          <p>
+            <span data-l="en">In Hyannis, Massachusetts, I spent years in hotel maintenance, grounds and landscaping, and a high-volume kitchen. I also install ceramic tile.</span>
+            <span data-l="pt">Em Hyannis, Massachusetts, passei anos na manutenção de hotel, em áreas externas e paisagismo e numa cozinha de alto volume. Também faço assentamento de piso cerâmico.</span>
+          </p>
+          <div class="traits">
+            <span><span data-l="en">Punctual</span><span data-l="pt">Pontual</span></span>
+            <span><span data-l="en">Safety first</span><span data-l="pt">Segurança em primeiro lugar</span></span>
+            <span><span data-l="en">Heavy physical work</span><span data-l="pt">Trabalho pesado</span></span>
+            <span><span data-l="en">Tools &amp; equipment</span><span data-l="pt">Ferramentas e equipamentos</span></span>
+            <span><span data-l="en">Guest-facing</span><span data-l="pt">Contato com hóspedes</span></span>
+          </div>
+        </div>
+        <div class="hands-grid">
+          <figure class="shot reveal">
+            <div class="shot-img"><img src="assets/img/maintenance.webp" width="1200" height="801" loading="lazy" decoding="async"
+              alt="Hands using a power drill on a repair"
+              data-alt-en="Hands using a power drill on a repair"
+              data-alt-pt="Mãos usando uma furadeira num reparo"></div>
+            <figcaption>
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-wrench"/></svg>
+              <div><strong><span data-l="en">General maintenance</span><span data-l="pt">Manutenção geral</span></strong>
+                <span data-l="en">Days Inn, Hyannis MA. 4 years of repairs and facility upkeep.</span><span data-l="pt">Days Inn, Hyannis MA. 4 anos de reparos e conservação do hotel.</span></div>
+            </figcaption>
+          </figure>
+          <figure class="shot reveal" style="--d:.08s">
+            <div class="shot-img"><img src="assets/img/landscaping.webp" width="1200" height="800" loading="lazy" decoding="async"
+              alt="Gloved hands pruning a green shrub with hand shears"
+              data-alt-en="Gloved hands pruning a green shrub with hand shears"
+              data-alt-pt="Mãos de luva podando um arbusto com tesoura de poda"></div>
+            <figcaption>
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-plant"/></svg>
+              <div><strong><span data-l="en">Landscaping &amp; grounds</span><span data-l="pt">Paisagismo e áreas externas</span></strong>
+                <span data-l="en">Lawns, hedges, walkways and outdoor areas kept safe for guests.</span><span data-l="pt">Gramados, cercas vivas, calçadas e áreas externas seguras para os hóspedes.</span></div>
+            </figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <div class="shot-img"><img src="assets/img/tile.webp" width="1000" height="1500" loading="lazy" decoding="async"
+              alt="Hands setting white ceramic tile on a wall"
+              data-alt-en="Hands setting white ceramic tile on a wall"
+              data-alt-pt="Mãos assentando revestimento cerâmico branco na parede"></div>
+            <figcaption>
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-squares-four"/></svg>
+              <div><strong><span data-l="en">Ceramic tile installation</span><span data-l="pt">Assentamento de piso cerâmico</span></strong>
+                <span data-l="en">Floors and walls laid level, clean and with even grout lines.</span><span data-l="pt">Pisos e paredes nivelados, limpos e com rejunte uniforme.</span></div>
+            </figcaption>
+          </figure>
+          <figure class="shot shot-plain reveal" style="--d:.08s">
+            <div class="shot-img" aria-hidden="true"><svg class="icon"><use href="assets/icons.svg#i-cooking-pot"/></svg></div>
+            <figcaption>
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-cooking-pot"/></svg>
+              <div><strong><span data-l="en">Line cook</span><span data-l="pt">Cozinheiro de linha</span></strong>
+                <span data-l="en">TGI Fridays, Hyannis MA. 3 years on the grill, salad and pasta stations.</span><span data-l="pt">TGI Fridays, Hyannis MA. 3 anos nas praças de grelha, saladas e massas.</span></div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREER RAIL -->
+    <section class="section" id="experience" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2><span data-l="en">Career at a glance</span><span data-l="pt">Carreira em resumo</span></h2>
+        </div>
+        <div class="rail">
+          <div class="stop now reveal">
+            <div class="stop-time"><span data-l="en">Present</span><span data-l="pt">Atual</span></div>
+            <h3><span data-l="en">Systems Analyst</span><span data-l="pt">Analista de Sistemas</span></h3>
+            <p>Hero1 Tecnologia e Negócios</p>
+          </div>
+          <div class="stop reveal" style="--d:.08s">
+            <div class="stop-time"><span data-l="en">20 years</span><span data-l="pt">20 anos</span></div>
+            <h3><span data-l="en">Master Control, Camera &amp; Editing</span><span data-l="pt">Controle Mestre, Cinegrafista e Editor</span></h3>
+            <p>TV Gazeta</p>
+          </div>
+          <div class="stop reveal" style="--d:.16s">
+            <div class="stop-time"><span data-l="en">4 years</span><span data-l="pt">4 anos</span></div>
+            <h3><span data-l="en">General Maintenance Worker</span><span data-l="pt">Manutenção Geral</span></h3>
+            <p>Days Inn, Hyannis MA</p>
+          </div>
+          <div class="stop reveal" style="--d:.24s">
+            <div class="stop-time"><span data-l="en">3 years</span><span data-l="pt">3 anos</span></div>
+            <h3><span data-l="en">Line Cook</span><span data-l="pt">Cozinheiro de Linha</span></h3>
+            <p>TGI Fridays, Hyannis MA</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" style="padding-top:0">
+      <div class="wrap">
+        <div class="contact reveal">
+          <img class="avatar" src="assets/img/fabiano.webp" width="460" height="460" loading="lazy" decoding="async"
+            alt="Fabiano Couto" data-alt-en="Fabiano Couto" data-alt-pt="Fabiano Couto">
+          <div>
+            <h2><span data-l="en">Let's work together.</span><span data-l="pt">Vamos trabalhar juntos.</span></h2>
+            <p>
+              <span data-l="en">Available for systems and data analyst roles and Sankhya projects. I answer in Portuguese or English.</span>
+              <span data-l="pt">Disponível para vagas de analista de sistemas e de dados e para projetos Sankhya. Respondo em português ou inglês.</span>
+            </p>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="mailto:fcoutopereira@live.com">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-envelope-simple"/></svg>
+                <span data-l="en">Send an e-mail</span><span data-l="pt">Enviar e-mail</span></a>
+              <a class="btn btn-ghost" href="https://wa.me/5527997372667" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-whatsapp-logo"/></svg>WhatsApp</a>
+              <a class="btn btn-ghost" href="https://www.linkedin.com/in/fabiano-couto-b2785372/" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-linkedin-logo"/></svg>LinkedIn</a>
+              <a class="btn btn-ghost" href="https://www.instagram.com/bianocouto" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-instagram-logo"/></svg>Instagram</a>
+            </div>
+            <div class="contact-meta">
+              <a href="tel:+5527997372667"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-phone"/></svg>+55 (27) 99737-2667</a>
+              <button type="button" class="contact-copy" data-copy="fcoutopereira@live.com"
+                data-aria-en="Copy e-mail address" data-aria-pt="Copiar endereço de e-mail" aria-label="Copy e-mail address">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-copy"/></svg>fcoutopereira@live.com</button>
+              <a href="https://github.com/Fabiano-Couto" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-github-logo"/></svg>GitHub</a>
+              <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-map-pin"/></svg><span data-l="en">São Mateus, ES, Brazil</span><span data-l="pt">São Mateus, ES, Brasil</span></span>
+            </div>
+            <p class="copy-status" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <span>&copy; 2026 Fabiano Couto</span>
+      <a href="#top"><span data-l="en">Back to top</span><span data-l="pt">Voltar ao topo</span></a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

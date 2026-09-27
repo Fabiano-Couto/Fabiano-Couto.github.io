@@ -281,6 +281,7 @@ p { margin: 0; }
   margin-top: 56px; padding: 28px 32px; border-radius: var(--r-lg); background: var(--accent-soft);
   font-size: clamp(1.15rem, 2vw, 1.45rem); line-height: 1.45; letter-spacing: -0.01em; max-width: 900px;
 }
+.bridge-label { display: block; margin-bottom: 10px; font-size: 13px; font-weight: 500; letter-spacing: .02em; color: var(--accent); }
 
 /* hands-on */
 .hands { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(32px, 6vw, 80px); align-items: start; }
@@ -296,18 +297,30 @@ p { margin: 0; }
 .shot-plain .shot-img { display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); }
 .shot-plain .shot-img .icon { width: 72px; height: 72px; }
 
-/* career rail */
-.rail { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; }
-.rail::before { content: ""; position: absolute; left: 0; right: 0; top: 7px; height: 1px; background: var(--line); }
-.stop { position: relative; padding-top: 36px; }
-.stop::before {
-  content: ""; position: absolute; top: 0; left: 0; width: 15px; height: 15px; border-radius: 50%;
-  background: var(--bg); border: 2px solid var(--neutral-mark);
+/* journey: the career as a rising bar chart, oldest stage on the left.
+   The bars share one bottom edge (stretch) and the top margin sets each rise,
+   so the steps keep climbing whatever the text length. */
+.climb { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.step {
+  display: flex; flex-direction: column; justify-content: space-between; gap: 40px; min-width: 0; min-height: 260px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 24px;
 }
-.stop.now::before { border-color: var(--accent); background: var(--accent); }
-.stop-time { font-size: 13.5px; color: var(--muted); }
-.stop h3 { font-size: 18px; letter-spacing: -0.015em; margin-top: 6px; line-height: 1.25; }
-.stop p { font-size: 15px; color: var(--muted); margin-top: 6px; }
+.step:nth-child(1) { margin-top: 128px; }
+.step:nth-child(2) { margin-top: 64px; background: var(--accent-soft); border-color: transparent; }
+.step:nth-child(3) { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.step-top { display: flex; justify-content: space-between; align-items: center; }
+.step-top .icon { font-size: 22px; color: var(--accent); }
+.step-num { font-size: 13px; color: var(--muted); }
+.step-time { font-size: 13.5px; color: var(--muted); }
+.step h3 { font-size: 21px; letter-spacing: -0.02em; margin-top: 6px; line-height: 1.2; }
+.step p { font-size: 15px; color: var(--muted); margin-top: 10px; max-width: 34ch; }
+.step-where { font-size: 14px; font-weight: 500; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+.step:nth-child(2) .step-where { border-top-color: color-mix(in srgb, var(--accent) 22%, transparent); }
+.step:nth-child(3) .step-top .icon { color: inherit; }
+.step:nth-child(3) .step-num,
+.step:nth-child(3) .step-time,
+.step:nth-child(3) p { color: color-mix(in srgb, var(--accent-ink) 80%, transparent); }
+.step:nth-child(3) .step-where { border-top-color: color-mix(in srgb, var(--accent-ink) 25%, transparent); }
 
 /* contact */
 .contact {
@@ -369,8 +382,9 @@ p { margin: 0; }
   .cell-e { grid-column: 1 / 3; grid-row: auto; }
   .hands { grid-template-columns: 1fr; }
   .hands-copy { position: static; }
-  .rail { grid-template-columns: 1fr 1fr; row-gap: 40px; }
-  .rail::before { display: none; }
+  .step { padding: 20px; }
+  .step:nth-child(1) { margin-top: 96px; }
+  .step:nth-child(2) { margin-top: 48px; }
 }
 @media (max-width: 767px) {
   body { font-size: 16px; }
@@ -392,7 +406,9 @@ p { margin: 0; }
   .hands-grid { grid-template-columns: 1fr; }
   .hands-grid .shot:nth-child(2), .hands-grid .shot:nth-child(4) { margin-top: 0; }
   .hands-grid .shot-img { aspect-ratio: 4 / 3; }
-  .rail { grid-template-columns: 1fr; }
+  /* one column: read top to bottom, the colour still deepens toward today */
+  .climb { grid-template-columns: 1fr; gap: 12px; }
+  .step, .step:nth-child(1), .step:nth-child(2) { margin-top: 0; min-height: 0; gap: 28px; }
   .contact { grid-template-columns: 1fr; }
   .bridge { padding: 22px; }
 }

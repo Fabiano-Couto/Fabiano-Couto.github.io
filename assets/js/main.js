@@ -8,7 +8,7 @@
   var TEXT = {
     en: {
       title: 'Fabiano Couto | Systems & Data Analyst',
-      description: 'Fabiano Couto, Systems and Data Analyst. Sankhya ERP dashboards, SQL and automation. Twenty years in live television and hands-on work experience.',
+      description: 'Fabiano Couto, Systems and Data Analyst for large companies in Brazil. Sankhya ERP dashboards and SQL. 20 years at TV Gazeta, hands-on work and long-term commitment.',
       months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
       regions: ['Southeast', 'Northeast', 'South', 'Center-West', 'North'],
       dre: ['Gross revenue', 'Deductions', 'Net revenue', 'COGS', 'Gross profit', 'Opex', 'EBITDA'],
@@ -24,7 +24,7 @@
     },
     pt: {
       title: 'Fabiano Couto | Analista de Sistemas e Dados',
-      description: 'Fabiano Couto, Analista de Sistemas e Dados. Dashboards, SQL e automação no ERP Sankhya. Vinte anos de televisão ao vivo e experiência em trabalho manual.',
+      description: 'Fabiano Couto, Analista de Sistemas e Dados para grandes empresas do Brasil. Dashboards no ERP Sankhya e SQL. 20 anos na TV Gazeta, trabalho manual e compromisso de longo prazo.',
       months: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
       regions: ['Sudeste', 'Nordeste', 'Sul', 'Centro-Oeste', 'Norte'],
       dre: ['Receita bruta', 'Deduções', 'Receita líquida', 'CMV', 'Lucro bruto', 'Despesas', 'EBITDA'],

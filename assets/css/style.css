@@ -143,7 +143,7 @@ p { margin: 0; }
     radial-gradient(60% 55% at 78% 18%, var(--sky), transparent 70%),
     radial-gradient(45% 40% at 12% 0%, color-mix(in srgb, var(--sky) 70%, transparent), transparent 70%);
 }
-.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr); }
 .eyebrow {
   display: inline-block; font-size: 13px; font-weight: 500; letter-spacing: .02em;
   color: var(--accent); background: var(--accent-soft); padding: 6px 14px; border-radius: 999px; margin-bottom: 22px;
@@ -151,26 +151,6 @@ p { margin: 0; }
 .hero h1 { font-size: clamp(3rem, 6.4vw, 5.4rem); letter-spacing: -0.045em; max-width: 13ch; }
 .hero-sub { margin-top: 24px; font-size: 19px; color: var(--muted); max-width: 50ch; }
 .hero-ctas { margin-top: 34px; display: flex; gap: 12px; flex-wrap: wrap; }
-
-/* portrait with the 20-years card tucked over its lower-left corner */
-.hero-visual { position: relative; justify-self: end; width: min(100%, 420px); margin-bottom: 32px; }
-.hero-photo {
-  width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 28px;
-  border: 1px solid var(--line); box-shadow: var(--shadow); background: var(--surface-2);
-}
-.hero-card {
-  position: absolute; left: -48px; bottom: -32px; width: 260px;
-  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg);
-  box-shadow: var(--shadow); padding: 18px 20px;
-}
-.hero-card-num { font-size: 46px; font-weight: 600; line-height: .9; letter-spacing: -0.05em; color: var(--accent); }
-.hero-card-num small { font-size: 15px; font-weight: 500; letter-spacing: 0; color: var(--muted); margin-left: 6px; }
-.hero-card-title { margin-top: 10px; font-size: 15.5px; font-weight: 600; letter-spacing: -0.01em; }
-.hero-card-now {
-  display: flex; gap: 8px; align-items: flex-start; margin-top: 10px; padding-top: 10px;
-  border-top: 1px solid var(--line); font-size: 13.5px; line-height: 1.4; color: var(--muted);
-}
-.hero-card-now .icon { color: var(--accent); margin-top: 1px; }
 
 /* ---------- marquee (the single one on the page: the working toolset) ---------- */
 .tools { border-block: 1px solid var(--line); padding: 20px 0; overflow: hidden; }
@@ -358,11 +338,7 @@ p { margin: 0; }
   .mobile-nav .btn { margin-top: 18px; justify-content: center; border-bottom: 0; padding: 0 22px; }
 }
 @media (max-width: 940px) {
-  .hero-grid { grid-template-columns: 1fr; }
   .hero h1 { max-width: 16ch; }
-  /* stacked: portrait under the text, card on the right so it does not hide the face */
-  .hero-visual { justify-self: start; width: min(100%, 380px); margin: 8px 0 88px; }
-  .hero-card { left: auto; right: -24px; bottom: -88px; }
   .hands { grid-template-columns: 1fr; }
   .hands-copy { position: static; }
   .step { padding: 20px; }
@@ -375,9 +351,6 @@ p { margin: 0; }
   body { font-size: 16px; }
   .hero { padding-bottom: 48px; }
   .hero-sub { font-size: 17px; }
-  .hero-visual { width: calc(100% - 24px); margin-bottom: 96px; }
-  .hero-card { right: -24px; bottom: -96px; width: 230px; padding: 14px 16px; }
-  .hero-card-num { font-size: 38px; }
   .services { grid-template-columns: 1fr; }
   .broadcast-intro { grid-template-columns: 1fr; gap: 20px; }
   .broadcast-grid { grid-template-columns: 1fr; }

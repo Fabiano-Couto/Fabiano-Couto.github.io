@@ -75,8 +75,8 @@
     requestAnimationFrame(step);
   }
 
-  /* ---------- reveal on scroll (sections, bars, steps, shutters, numbers) ---------- */
-  var revealSelector = '.reveal, .reveal-bar, .reveal-step, [data-shutter]';
+  /* ---------- reveal on scroll (sections, bars, steps, numbers) ---------- */
+  var revealSelector = '.reveal, .reveal-bar, .reveal-step';
   var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (!e.isIntersecting) return;
@@ -265,7 +265,6 @@
 
   /* ---------- attach observers ---------- */
   document.querySelectorAll(revealSelector).forEach(watch);
-  document.querySelectorAll('.big-number [data-roll]').forEach(watch);
 
   applyLang(lang(), false);
 })();

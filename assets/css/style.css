@@ -465,10 +465,10 @@ p { margin: 0; text-wrap: pretty; }
 .value h3 { font-size: 20px; letter-spacing: -0.02em; }
 .value p { margin-top: 8px; color: var(--muted); font-size: 16px; max-width: 40ch; }
 
-/* certifications: 3-column grid */
+/* certifications: 2x2 grid */
 .certs { margin-top: 56px; }
 .certs-title { font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--accent); margin-bottom: 16px; }
-.certs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.certs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .cert {
   display: grid; grid-template-columns: 44px 1fr; gap: 16px; align-items: start;
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 22px 22px;
@@ -544,7 +544,6 @@ p { margin: 0; text-wrap: pretty; }
   .mobile-nav.open { display: flex; }
   .mobile-nav a { padding: 14px 0; text-decoration: none; font-size: 18px; border-bottom: 1px solid var(--line); }
   .mobile-nav .btn { margin-top: 18px; justify-content: center; border-bottom: 0; padding: 0 22px; }
-  .certs-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 940px) {
   .hero-grid { grid-template-columns: 1fr; }
